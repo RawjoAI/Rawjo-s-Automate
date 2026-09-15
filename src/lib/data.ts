@@ -2,11 +2,20 @@ export const site = {
   name: "Rawjo's Automate",
   tagline: "AI Automation Services, Built for Real Businesses",
   description:
-    "Rawjo's Automate is an independent freelance practice helping small businesses and solo operators automate repetitive work using AI tools and no-code/low-code platforms — so you get time back and fewer dropped balls.",
-  url: "https://Rawjo's-automate.vercel.app",
+    "Rawjo's Automate is an independent freelance practice helping small businesses across industries — real estate, car dealerships, clinics, rolling mills, salons, and more — automate repetitive work using AI tools and no-code/low-code platforms, so you get time back and fewer dropped balls.",
+  url: "https://rawjos-automate.vercel.app",
   email: "rawjoaiauto@gmail.com",
   location: "Nairobi, Kenya (remote-friendly, works with clients globally)",
 };
+
+export const industries = [
+  { name: "Real Estate", icon: "Building2" },
+  { name: "Car Dealerships", icon: "Car" },
+  { name: "Clinics & Healthcare", icon: "Stethoscope" },
+  { name: "Rolling Mills & Manufacturing", icon: "Factory" },
+  { name: "Salons & Personal Care", icon: "Scissors" },
+  { name: "And more", icon: "Sparkles" },
+];
 
 export const services = [
   {
@@ -102,26 +111,18 @@ export const supportOptions = [
     cta: "Connect",
     href: "/contact",
   },
-  {
-    title: "Voluntary Support",
-    description:
-      "If someone has found this work valuable and wants to contribute toward equipment (my current laptop struggles with heavier workloads), that's welcome — but never expected.",
-    icon: "Gift",
-    cta: "Learn more",
-    href: "/support",
-  },
 ];
 
 export const faqs = [
   {
     question: "What exactly is Rawjo's Automate?",
     answer:
-      "It's the freelance practice of one independent operator (not a company, agency, or registered institution) offering AI automation and workflow-consulting services. It is not a bank, lender, charity, crowdfunding platform, or investment vehicle.",
+      "It's the freelance practice of one independent operator (not a company, agency, or registered institution) offering AI automation and workflow-consulting services across industries. It is not a bank, lender, charity, crowdfunding platform, or investment vehicle.",
   },
   {
     question: "What kind of businesses do you work with?",
     answer:
-      "Mostly small businesses, solo founders, and teams doing manual, repetitive work in spreadsheets, email, or multiple disconnected tools — the kind of work that's a good fit for Make.com-style automation or a simple AI assistant.",
+      "A wide range — real estate agencies, car dealerships, clinics, rolling mills and manufacturing operations, salons, and other small businesses doing manual, repetitive work in spreadsheets, email, or multiple disconnected tools.",
   },
   {
     question: "Do you require payment upfront?",
@@ -131,7 +132,7 @@ export const faqs = [
   {
     question: "What is the 'Support' page about?",
     answer:
-      "It's a page for people who've worked with me or followed the project and want to voluntarily contribute — for example toward a laptop upgrade needed for heavier client workloads. It is entirely optional and separate from any paid service.",
+      "It covers the non-project ways to get involved with this practice — business partnerships, mentorship, and professional networking. It's separate from paid project work and has no fees attached.",
   },
   {
     question: "Is this a registered company?",
@@ -182,16 +183,8 @@ export const timeline = [
   },
   {
     date: "Ongoing",
-    title: "Client acquisition and equipment upgrade",
+    title: "Expanding across industries",
     description:
-      "Currently focused on finding first paying clients, with a secondary, optional goal of upgrading hardware that currently struggles under heavier automation and AI workloads.",
+      "Currently focused on finding clients beyond the original real estate focus — including car dealerships, clinics, rolling mills, and salons — wherever repetitive manual work is slowing a business down.",
   },
 ];
-
-export const equipmentFund = {
-  goalLabel: "Laptop upgrade fund",
-  goalAmountKsh: 200000,
-  currentAmountKsh: 0,
-  purpose:
-    "My current laptop lags noticeably during heavier automation testing and AI workloads. A more capable machine would let me take on larger client projects reliably. This is a personal, voluntary wishlist item — not a condition of any service, and not a fundraising campaign with a fixed deadline.",
-};

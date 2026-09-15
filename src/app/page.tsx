@@ -3,21 +3,15 @@ import Hero from "@/components/Hero";
 import StatCards from "@/components/StatCards";
 import ServiceCards from "@/components/ServiceCards";
 import SupportCards from "@/components/SupportCards";
-import ProgressBar from "@/components/ProgressBar";
 import CTABanner from "@/components/CTABanner";
 import { ShieldCheck, Eye, Lock } from "lucide-react";
-import {
-  stats,
-  services,
-  process,
-  supportOptions,
-  equipmentFund,
-} from "@/lib/data";
+import { stats, services, process, supportOptions, industries } from "@/lib/data";
+import { getIcon } from "@/components/IconMap";
 
 export const metadata: Metadata = {
   title: "Home",
   description:
-    "Horizon Automate helps small businesses automate repetitive workflows using AI and no-code tools. See services, progress, and how to get involved.",
+    "Rawjo's Automate helps businesses across industries automate repetitive workflows using AI and no-code tools. See services, industries served, and how to get involved.",
 };
 
 const commitments = [
@@ -57,6 +51,30 @@ export default function HomePage() {
       </section>
 
       <section className="section bg-slate-50">
+        <h2 className="section-title text-center">Industries I Work With</h2>
+        <p className="section-subtitle mx-auto text-center">
+          Automation isn't tied to one type of business — if the work is
+          repetitive, it's usually worth automating.
+        </p>
+        <div className="mt-10 flex flex-wrap justify-center gap-4">
+          {industries.map((industry) => {
+            const Icon = getIcon(industry.icon);
+            return (
+              <div
+                key={industry.name}
+                className="flex items-center gap-2 rounded-full border border-slate-200 bg-white px-5 py-2.5 shadow-sm"
+              >
+                <Icon size={18} className="text-brand-600" aria-hidden="true" />
+                <span className="text-sm font-medium text-slate-700">
+                  {industry.name}
+                </span>
+              </div>
+            );
+          })}
+        </div>
+      </section>
+
+      <section className="section">
         <h2 className="section-title text-center">What I Offer</h2>
         <p className="section-subtitle mx-auto text-center">
           Four focused service areas — not a scattershot list of everything
@@ -64,22 +82,6 @@ export default function HomePage() {
         </p>
         <div className="mt-10">
           <ServiceCards services={services} />
-        </div>
-      </section>
-
-      <section className="section">
-        <div className="mx-auto max-w-2xl text-center">
-          <h2 className="section-title">Equipment Upgrade — Optional Support</h2>
-          <p className="section-subtitle mx-auto">
-            {equipmentFund.purpose}
-          </p>
-        </div>
-        <div className="mx-auto mt-8 max-w-xl rounded-2xl border border-slate-200 bg-white p-6 shadow-sm">
-          <ProgressBar
-            current={equipmentFund.currentAmountKsh}
-            goal={equipmentFund.goalAmountKsh}
-            label={equipmentFund.goalLabel}
-          />
         </div>
       </section>
 
